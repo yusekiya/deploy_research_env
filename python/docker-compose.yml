@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jupyter:
+    image: 'yusekiya/research-python:<tag>'
+    volumes:
+      - './src:/project/src'
+      - './src/lib:/project/notebook/lib'
+      - './img:/project/img'
+      - './notebook:/project/notebook'
+      - './data:/project/data'
+    ports:
+      - '8888'
+    env_file:
+      - './jupyter.env'
