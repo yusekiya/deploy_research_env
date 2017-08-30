@@ -12,3 +12,6 @@ services:
       - '8888'
     env_file:
       - './jupyter.env'
+    environment:
+      - SHELL=/bin/bash
+      - LESS=-iRFX -# 5

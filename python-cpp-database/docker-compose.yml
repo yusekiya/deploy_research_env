@@ -13,6 +13,9 @@ services:
     env_file:
       - './jupyter.env'
       - './db.env'
+    environment:
+      - SHELL=/bin/bash
+      - LESS=-iRFX -# 5
     depends_on:
       - db
   db:
