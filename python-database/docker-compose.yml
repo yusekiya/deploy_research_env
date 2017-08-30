@@ -1,0 +1,36 @@
+version: '3'
+services:
+  jupyter:
+    image: 'yusekiya/research-python:<tag>'
+    volumes:
+      - './src:/project/src'
+      - './src/lib:/project/notebook/lib'
+      - './img:/project/img'
+      - './notebook:/project/notebook'
+      - './data:/project/data'
+    ports:
+      - '8888'
+    env_file:
+      - './jupyter.env'
+      - './db.env'
+    depends_on:
+      - db
+  db:
+    image: 'postgres:9.6.2'
+    volumes:
+      - './db:/var/lib/postgresql/data'
+    env_file:
+      - './db.env'
+    ports:
+      - '5432'
+  pgweb:
+    image: 'sosedoff/pgweb'
+    ports: 
+      - '8081' 
+    env_file:
+      - './db.env'
+    command: ['/usr/bin/pgweb', '--bind=0.0.0.0', '--listen=8081', '--ssl', 'disable']
+    links:
+      - 'db:db'
+    depends_on:
+      - db
