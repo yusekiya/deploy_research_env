@@ -1,6 +1,6 @@
 # How to use
 
-## Setup python and c++ environment with database
+## Setup jupyter and c++ environment with database
 
 ### Edit env files
 
@@ -21,7 +21,7 @@ POSTGRES_PASSWORD=<your_db_password>
 Specify tag of container image
 
 ```yaml
-image: 'yusekiya/research-python-cpp:<tag>'
+image: 'yusekiya/research-jupyter-cpp:<tag>'
 ```
 
 

@@ -1,6 +1,6 @@
 # How to use
 
-## Setup python and c++ environment
+## Setup jupyter and c++ environment
 
 ### Edit env file
 
@@ -14,7 +14,7 @@ NOTEBOOK_PASSWORD=<your_notebook_password>
 Specify tag of container image
 
 ```yaml
-image: 'yusekiya/research-python-cpp:<tag>'
+image: 'yusekiya/research-jupyter-cpp:<tag>'
 ```
 
 

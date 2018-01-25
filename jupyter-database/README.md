@@ -1,4 +1,4 @@
-# Setup python environment with database
+# Setup jupyter environment with database
 
 ## Edit env files
 
@@ -19,5 +19,5 @@ POSTGRES_PASSWORD=<your_db_password>
 Specify tag of container image
 
 ```yaml
-image: 'yusekiya/research-python:<tag>'
+image: 'yusekiya/research-jupyter:<tag>'
 ```

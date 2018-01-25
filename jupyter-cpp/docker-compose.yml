@@ -1,7 +1,7 @@
 version: '3'
 services:
   jupyter:
-    image: 'yusekiya/research-python:<tag>'
+    image: 'yusekiya/research-jupyter-cpp:<tag>'
     volumes:
       - './src:/project/src'
       - './src/lib:/project/notebook/lib'

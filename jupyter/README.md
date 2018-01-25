@@ -1,4 +1,4 @@
-# Setup python environment
+# Setup jupyter environment
 
 ## Edit env file
 
@@ -12,5 +12,5 @@ NOTEBOOK_PASSWORD=<your_notebook_password>
 Specify tag of container image
 
 ```yaml
-image: 'yusekiya/research-python:<tag>'
+image: 'yusekiya/research-jupyter:<tag>'
 ```
