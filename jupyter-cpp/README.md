@@ -7,7 +7,7 @@
 Define your password to login to notebook server in the `jupyter.env `file.
 
 ``` ini
-NOTEBOOK_PASSWORD=<your_notebook_password>
+JUPYTER_PASSWORD=<your_notebook_password>
 ```
 ### Edit docker-compose.yml
 
