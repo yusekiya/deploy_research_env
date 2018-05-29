@@ -9,7 +9,7 @@ services:
       - './notebook:/project/notebook'
       - './data:/project/data'
     ports:
-      - '8888'
+      - '127.0.0.1::8888'
     env_file:
       - './jupyter.env'
       - './db.env'
@@ -25,11 +25,11 @@ services:
     env_file:
       - './db.env'
     ports:
-      - '5432'
+      - '127.0.0.1::5432'
   pgweb:
     image: 'sosedoff/pgweb'
     ports: 
-      - '8081' 
+      - '127.0.0.1::8081' 
     env_file:
       - './db.env'
     command: ['/usr/bin/pgweb', '--bind=0.0.0.0', '--listen=8081', '--ssl', 'disable']

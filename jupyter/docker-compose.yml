@@ -9,7 +9,7 @@ services:
       - './notebook:/project/notebook'
       - './data:/project/data'
     ports:
-      - '8888'
+      - '127.0.0.1::8888'
     env_file:
       - './jupyter.env'
     environment:
